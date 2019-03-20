@@ -1,0 +1,6 @@
+.Content{
+    display: grid;
+    height: 90vh;
+    grid-area: Content ;
+    background-color: tomato;
+  }

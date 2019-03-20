@@ -1,0 +1,15 @@
+.rooms{
+  background-color:thistle;
+  text-align: center;
+  padding-top: 50%;
+  border-radius:20px;
+  margin: 10px;
+  border: solid black 2px;
+}
+.rooms a {
+  color:black;
+  text-decoration: none;
+}
+.rooms a.active{
+  color:gold;
+}

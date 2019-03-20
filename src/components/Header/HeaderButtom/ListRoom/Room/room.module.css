@@ -1,0 +1,12 @@
+.room{
+    background-color:mediumpurple;
+    margin: 3px;
+}
+
+.room a {
+    color: cyan;
+    text-decoration: none;
+}
+.room a.activeBroom{
+    color: crimson;
+}

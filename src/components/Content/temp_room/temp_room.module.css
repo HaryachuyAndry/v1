@@ -1,0 +1,6 @@
+.temp_room{
+    display: grid;  
+}
+.roomT {
+    grid-gap: 10px 10px;
+}

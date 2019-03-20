@@ -1,0 +1,8 @@
+.listroom{
+    background-color: seagreen;
+    margin: 10px;
+    border: solid black 1px;
+    text-align: center;
+    display:grid;
+    grid-template-columns: repeat(10,1fr);
+}

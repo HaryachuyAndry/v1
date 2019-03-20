@@ -1,0 +1,14 @@
+.Navbar{
+    height: 90vh;
+    grid-area: Navbar ;
+    background-color: tomato;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: 
+    "rooms"
+    "C_rooms"
+    "charts"
+    "scenery"
+    "control"
+  }

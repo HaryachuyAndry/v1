@@ -1,0 +1,6 @@
+.HeadButtom{
+  grid-area: HeadButtom;
+  background-color: burlywood;
+  display: grid;
+  grid-template-columns: 17fr 1fr;
+}

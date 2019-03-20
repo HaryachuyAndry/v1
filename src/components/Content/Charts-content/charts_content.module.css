@@ -1,0 +1,39 @@
+.Charts_container{
+    display: grid;
+    grid-template-rows: 1fr 1fr 20fr;
+    text-align: center;
+    font-size: 20px;
+    grid-template-areas: "dey week month year"
+                         "energi energi gas gas" 
+                         "chart chart chart chart"
+}
+
+.dey{
+    background-color: maroon;
+    grid-area: dey;
+}
+
+.energi{
+    background-color: rgb(0, 128, 75);
+    grid-area: energi;
+}
+.chart{
+    background-color: rgb(911, 128, 0);
+    grid-area: chart;
+}
+.year{
+    background-color: rgb(90, 87, 0);
+    grid-area: year;
+}
+.month{
+    background-color: rgb(12, 128, 0);
+    grid-area: month;
+}
+.week{
+    background-color: rgb(765, 128, 0);
+    grid-area: week;
+}
+.gas{
+    background-color: rgb(789,235, 0);
+    grid-area: gas;
+}

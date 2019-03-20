@@ -1,0 +1,5 @@
+.HeadTop{
+  grid-area: HeadTop ;
+  background-color:aqua;
+  text-align: center;
+}

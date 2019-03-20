@@ -1,0 +1,8 @@
+.Edit{
+    display: grid;
+    position: absolute;
+    right: 10px;
+    height: 50vh;
+    width: 10vh;
+    background: wheat;
+}
