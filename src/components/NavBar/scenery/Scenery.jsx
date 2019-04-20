@@ -4,7 +4,7 @@ import {NavLink} from 'react-router-dom';
 const Scenary = () =>{
     return(
         <div className={Scenery_style.scenery}>
-            <NavLink to="/scenary" activeClassName={Scenery_style.active}>Сценарії</NavLink>
+            <NavLink to="/scenery" activeClassName={Scenery_style.active}>Сценарії</NavLink>
         </div>
     );
 }

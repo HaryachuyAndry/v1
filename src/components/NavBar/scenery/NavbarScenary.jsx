@@ -5,7 +5,7 @@ import {Route} from "react-router-dom";
 const NavbarScenary = () =>{
     return(
         <div className={NavB_style.Navbar}>
-                <Route path="/scenary" render={asdf} />
+                <Route path="/scenery" render={asdf} />
         </div>
     );
 }

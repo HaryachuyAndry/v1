@@ -5,6 +5,7 @@ import TempRoom from './temp_room/temp_room';
 import {Route} from "react-router-dom";
 import ChartsContent from './Charts-content/charts_content';
 import EditSet from './Edit/EditSet';
+import Scenery from './Scenery/scenery';
 
 const Content = (props) =>{
     return(
@@ -12,6 +13,7 @@ const Content = (props) =>{
                 <Route path="/climate" render={() => <TempRoom/>}/>
                 <Route path="/rooms" render={() =><ImgRoom dataRoom={props.dataRoom}/>}/> 
                 <Route path="/charts" render={() =><ChartsContent/>}/> 
+                <Route path="/scenery" render={() =><Scenery/>}/> 
                 <EditSet  Addroom={props.Addroom}/>
             </div>
     );  

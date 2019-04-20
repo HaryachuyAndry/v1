@@ -1,0 +1,1 @@
+export const CHANGE_IMAGE_ROMM = "BUTON_CHANGE_LIST_ROMM";

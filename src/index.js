@@ -7,11 +7,18 @@ import dataRoom from './redux/state';
 import {buttonEdit} from './redux/state';
 import {Addroom} from './redux/state'
 import {roomData} from './redux/state'
+import {createStore} from 'redux';
+import rootRducer from './store/reducers';
+import { Provider } from 'react-redux';
+
+const store = createStore(rootRducer); 
 
 
-
-
-ReactDOM.render(<App dataRoom={dataRoom} buttonEdit={buttonEdit} Addroom={Addroom} roomData={roomData}/>, document.getElementById('root'));
+ReactDOM.render(
+    <Provider store={store} >
+        <App dataRoom={dataRoom} buttonEdit={buttonEdit} Addroom={Addroom} roomData={roomData}/>
+    </Provider>
+    , document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
