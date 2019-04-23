@@ -10,7 +10,7 @@ export const seneryOutput = (state = defaultstate , action ) => {
             case SCEN_CHANGE_ELEMENT1:
                 return{
                     ...state , 
-                    element1 : action.payload                };
+                       element1: action.payload             };
 
             case SCEN_CHANGE_ELEMENT2:
                 return{
