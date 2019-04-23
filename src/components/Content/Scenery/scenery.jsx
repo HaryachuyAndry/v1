@@ -5,8 +5,8 @@ const Scenery = (props) =>{
 
     return(
             <div >
-                <p>{this.props.element1}</p>
-                <p>{this.props.element2}</p>
+                <p>{props.element1}</p>
+                <p>{props.element2}</p>
             </div>
     );  
 }

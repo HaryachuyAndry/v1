@@ -5,7 +5,16 @@ import {outSceneryelement1 , outSceneryelement2} from '../../../store/Content/sc
 
 
 const SceneryContainer = (props) =>{
-    return( <Scenery element1={this.props.element1} element2={this.props.element2} outSceneryelement1={this.props.outSceneryelement1} outSceneryelement2={this.props.outSceneryelement2} ></Scenery> );  
+    console.log(props);
+    return( <Scenery 
+        element1={props.element1} 
+        element2={props.element2} 
+        
+        //outSceneryelement1={this.props.outSceneryelement1} 
+        //outSceneryelement2={this.props.outSceneryelement2}
+         >
+        
+        </Scenery> );  
 }
 
 const mapStateToProps = state => {
