@@ -17,6 +17,5 @@ export const seneryOutput = (state = defaultstate , action ) => {
                     ...state , 
                     element2 : action.payload                };
             
-    }
-     return state;
+    default: return state;}
 }
