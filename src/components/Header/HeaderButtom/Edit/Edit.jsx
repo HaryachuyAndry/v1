@@ -1,5 +1,5 @@
 import React from 'react';
-import Edit_Style from "./Edit.module.css"
+import Edit_Style from "./Edit.module.css" 
 import { buttonEdit } from '../../../../redux/state';
 
 const Edit = (props) =>{

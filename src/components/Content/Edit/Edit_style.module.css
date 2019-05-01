@@ -4,5 +4,8 @@
     right: 10px;
     height: 50vh;
     width: 10vh;
+    padding-top:10px; 
     background: wheat;
-}
+    grid-row: repeat(5,1fr);
+    justify-items: center;
+};
