@@ -10,7 +10,7 @@ import renameRoom from './imgEdit/rename_room.png';
 const EditSet = (props) =>{
  
     return(
-            <div className={Edit_style.Edit } >
+            <div className={Edit_style.Edit }  >
                 <img src={addFile} alt="" onClick={props.Addroom} className={Edit_style.icon}/>
                 <img src={addRoom} alt="" onClick={props.Addroom}className={Edit_style.icon}/>
                 <img src={deleteRoom} alt="" onClick={props.Addroom}className={Edit_style.icon}/>
