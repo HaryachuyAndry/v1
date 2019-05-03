@@ -1,12 +1,11 @@
 .charts{
+  font-size: 21px;
   color:black;
   grid-area: charts;
   background-color: thistle;
   text-align: center;
   padding-top: 50%;
-  border-radius:20px;
   margin: 10px;
-  border: solid black 2px;
 }
 .charts a {
   color:black;
