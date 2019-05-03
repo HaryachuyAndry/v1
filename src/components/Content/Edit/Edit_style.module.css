@@ -8,4 +8,5 @@
     background: wheat;
     grid-row: repeat(5,1fr);
     justify-items: center;
+    display: none;
 };
