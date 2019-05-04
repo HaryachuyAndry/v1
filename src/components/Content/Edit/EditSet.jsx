@@ -12,16 +12,18 @@ import RenameRoomContent from './editModalContents/renameRoom';
 import AddRoomContent from './editModalContents/addRoomContent';
 
 import addFile from './imgEdit/add_elemets.png';
-import addRoom from './imgEdit/add_room.png';
+import addRoomIcon from './imgEdit/add_room.png';
 import deleteRoom from './imgEdit/delete_room.png';
 import editImgRoom from './imgEdit/edit_img_room.png';
 import renameRoom from './imgEdit/rename_room.png';
-import Edit_style from './Edit_style.module.css';
+import EditStyle from './Edit_style.module.css';
+import { addRoomAction } from '../../../store/rooms/actions';
 
 class EditSet extends React.Component {
   state = {
     open: false,
     selectedModalType: '',
+    roomName: '',
   };
 
   handleClickOpen = (type) => {
@@ -32,17 +34,26 @@ class EditSet extends React.Component {
     this.setState({ open: false });
   };
 
+  addRoomHandler = (name) => {
+    this.setState({ roomName: name });
+  }
+
+  submitModal = () => {
+    this.handleClose();
+    if (this.state.selectedModalType === 'add-room') { this.props.addRoomAction(this.state.roomName); }
+  }
+
   render() {
     const { selectedModalType } = this.state;
     // const selectedModalType = this.state.selectedModalType
     return (
       <div>
-        <div className={Edit_style.Edit} >
-          <img src={addFile} alt="" onClick={() => this.handleClickOpen('add-device')} className={Edit_style.icon} />
-          <img src={addRoom} alt="" onClick={() => this.handleClickOpen('add-room')}className={Edit_style.icon} />
-          <img src={deleteRoom} alt="" onClick={() => this.handleClickOpen('delete-room')}className={Edit_style.icon} />
-          <img src={editImgRoom} alt="" onClick={() => this.handleClickOpen('edit-image')}className={Edit_style.icon} />
-          <img src={renameRoom} alt="" onClick={() => this.handleClickOpen('edit-room')}className={Edit_style.icon} />
+        <div className={EditStyle.Edit} >
+          <img src={addFile} alt="" onClick={() => this.handleClickOpen('add-device')} className={EditStyle.icon} />
+          <img src={addRoomIcon} alt="" onClick={() => this.handleClickOpen('add-room')}className={EditStyle.icon} />
+          <img src={deleteRoom} alt="" onClick={() => this.handleClickOpen('delete-room')}className={EditStyle.icon} />
+          <img src={editImgRoom} alt="" onClick={() => this.handleClickOpen('edit-image')}className={EditStyle.icon} />
+          <img src={renameRoom} alt="" onClick={() => this.handleClickOpen('edit-room')}className={EditStyle.icon} />
         </div>
         <Dialog
           open={this.state.open}
@@ -54,14 +65,14 @@ class EditSet extends React.Component {
             <DialogContentText>
               { selectedModalType === 'delete-room' && <RemoveRoomContent rooms={this.props.rooms} />}
               { selectedModalType === 'edit-room' && <RenameRoomContent rooms={this.props.rooms} />}
-              { selectedModalType === 'add-room' && <AddRoomContent />}
+              { selectedModalType === 'add-room' && <AddRoomContent change={this.addRoomHandler} />}
             </DialogContentText>
           </DialogContent>
           <DialogActions>
             <Button onClick={this.handleClose} color="primary">
               Cancel
             </Button>
-            <Button onClick={this.handleClose} color="primary">
+            <Button onClick={this.submitModal} color="primary">
               OK
             </Button>
           </DialogActions>
@@ -75,20 +86,8 @@ const mapStateToProps = state => ({
   rooms: state.rooms.rooms,
 });
 
-export default connect(mapStateToProps)(EditSet);
+const mapDispatchToProps = {
+  addRoomAction,
+};
 
-
-// import React from 'react';
-
-
-// const EditSet = props => (
-//   <div className={Edit_style.Edit} >
-//     <img src={addFile} alt="" onClick={props.Addroom} className={Edit_style.icon} />
-//     <img src={addRoom} alt="" onClick={props.Addroom}className={Edit_style.icon} />
-//     <img src={deleteRoom} alt="" onClick={props.Addroom}className={Edit_style.icon} />
-//     <img src={editImgRoom} alt="" onClick={props.Addroom}className={Edit_style.icon} />
-//     <img src={renameRoom} alt="" onClick={props.Addroom}className={Edit_style.icon} />
-//   </div>
-// );
-
-// export default EditSet;
+export default connect(mapStateToProps, mapDispatchToProps)(EditSet);

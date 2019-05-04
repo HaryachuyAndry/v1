@@ -17,6 +17,7 @@ export default class AddRoomContent extends Component {
           margin="dense"
           defaultValue={this.state.room}
           id="name"
+          onInput={e => this.props.change(e.target.value)}
           label="New room name"
           fullWidth
         />

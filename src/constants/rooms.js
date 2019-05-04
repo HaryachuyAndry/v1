@@ -1,4 +1,4 @@
-export const rooms = [
+export const defaultRooms = [
   { id: 1, nameRoom: 'кімната 1' },
   { id: 2, nameRoom: 'кімната 2' },
   { id: 3, nameRoom: 'кімната 3' },
