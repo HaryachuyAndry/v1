@@ -5,7 +5,7 @@ import Room from './Room/room';
 
 const ListRoom = (props) =>{
     
-    let listroom = props.roomData.map( addRom => <Room id={addRom.id} nameRoom={addRom.nameRoom} />);
+    let listroom = props.roomData.map( addRom => <Room key={addRom.id} id={addRom.id} nameRoom={addRom.name} />);
 
     return(
         <div className={ListRoom_Style.listroom}>

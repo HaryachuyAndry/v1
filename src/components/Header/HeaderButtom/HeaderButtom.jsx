@@ -1,14 +1,22 @@
-import React from 'react';
-import HeaderButtom_style from './HeaderButtom.module.css';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
+import HeaderButtomStyle from './HeaderButtom.module.css';
 import ListRoom from './ListRoom/ListRoom';
 import Edit from './Edit/Edit';
 
-const HeaderButtom = (props) =>{
-    return(
-        <div className={HeaderButtom_style.HeadButtom}>
-            <ListRoom roomData={props.roomData}/>
-            <Edit buttonEdit={props.buttonEdit}/>
-        </div>
+class HeaderButtom extends Component {
+  render() {
+    return (
+      <div className={HeaderButtomStyle.HeadButtom}>
+        <ListRoom roomData={this.props.listroom} />
+        <Edit buttonEdit={this.props.buttonEdit} />
+      </div>
     );
+  }
 }
-export default HeaderButtom;
+
+const mapStateToProps = state => ({
+  listroom: state.rooms.rooms,
+});
+export default connect(mapStateToProps)(HeaderButtom);
