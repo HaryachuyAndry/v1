@@ -1,5 +1,6 @@
 .HeadTop{
   grid-area: HeadTop ;
-  background-color:aqua;
+  background-color:#508BFF;
   text-align: center;
+  font-size: 21px;
 }

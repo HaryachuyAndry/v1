@@ -1,11 +1,11 @@
 .Edit{
     display: grid;
     position: absolute;
-    right: 10px;
+    right: 0;
     height: 50vh;
     width: 10vh;
     padding-top:10px; 
-    background: wheat;
+    background: #A0BDFF;
     grid-row: repeat(5,1fr);
     justify-items: center;
     display: none;
