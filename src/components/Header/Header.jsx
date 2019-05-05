@@ -6,7 +6,7 @@ import HeaderButtom from './HeaderButtom/HeaderButtom';
 const Header = props => (
   <div className={HeadStyle.Header}>
     <HeaderTop />
-    <HeaderButtom buttonEdit={props.buttonEdit} roomData={props.roomData} />
+    <HeaderButtom />
   </div>
 );
 export default Header;

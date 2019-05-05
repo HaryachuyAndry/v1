@@ -9,9 +9,9 @@ import Content from './components/Content/Content';
 const App = props => (
   <BrowserRouter>
     <div className="App">
-      <Header buttonEdit={props.buttonEdit} roomData={props.roomData} />
+      <Header />
       <Navbar />
-      <Content dataRoom={props.dataRoom} Addroom={props.Addroom} />
+      <Content dataRoom={props.dataRoom} />
     </div>
   </BrowserRouter>
 );

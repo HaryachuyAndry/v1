@@ -13,7 +13,7 @@ class HeaderButtom extends Component {
         <div className={listRoomStyle.listroom}>
           {this.props.listroom.map(r => <Room key={r.id} id={r.id} nameRoom={r.name} />)}
         </div>
-        <Edit buttonEdit={this.props.buttonEdit} />
+        <Edit  />
       </div>
     );
   }

@@ -14,7 +14,7 @@ const Content = (props) =>{
                 <Route path="/rooms" render={() =><ImgRoom dataRoom={props.dataRoom}/>}/> 
                 <Route path="/charts" render={() =><ChartsContent/>}/> 
                 <Route path="/scenery" render={() =><SceneryContainer/>}/> 
-                <EditSet  Addroom={props.Addroom}/>
+                <EditSet />
             </div>
     );  
 }
