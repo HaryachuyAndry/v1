@@ -1,0 +1,20 @@
+.login-page{
+  width: 100%;
+  height: 100vh;
+  background: grey;
+  position: fixed;
+}
+
+.login-form{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.login-form-body{
+  display: flex;
+  flex-direction: column;
+  padding: 30px 40px;
+  background: white;
+  border-radius: 20px;
+}
